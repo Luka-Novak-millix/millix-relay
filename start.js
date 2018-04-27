@@ -1,7 +1,7 @@
 /*jslint node: true */
 "use strict";
-var conf = require('byteballcore/conf.js');
-var myWitnesses = require('byteballcore/my_witnesses.js');
+var conf = require('millixcore/conf.js');
+var myWitnesses = require('millixcore/my_witnesses.js');
 
 function replaceConsoleLog(){
 	var clog = console.log;
@@ -13,7 +13,7 @@ function replaceConsoleLog(){
 
 function start(){
 	console.log('starting');
-	var network = require('byteballcore/network.js');
+	var network = require('millixcore/network.js');
 	if (conf.initial_peers)
 		conf.initial_peers.forEach(function(url){
 			network.findOutboundPeerOrConnect(url);
